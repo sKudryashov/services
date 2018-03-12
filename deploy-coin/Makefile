@@ -6,5 +6,14 @@ create-coin:
 start-coin:
 	go build -o $(GOPATH)/bin/start-coin ./cmd/start
 
-	# mkdir src/gui/static
-	# ./start -config config.txt -master true
+prepare-installation:
+	mkdir ./src/gui/static
+	mkdir ./.skycoin
+	touch ./.skycoin/data.db
+	chmod g+w ./.skycoin/data.db
+
+build-create-coin:
+	go build -o $(GOPATH)/bin/create-coin
+
+build-start-coin:
+	go build -o $(GOPATH)/bin/create-coin
