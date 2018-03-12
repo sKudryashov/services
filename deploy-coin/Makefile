@@ -5,3 +5,6 @@ create-coin:
 
 start-coin:
 	go build -o $(GOPATH)/bin/start-coin ./cmd/start
+
+	# mkdir src/gui/static
+	# ./start -config config.txt -master true

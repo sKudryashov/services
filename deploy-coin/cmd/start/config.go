@@ -13,7 +13,7 @@ import (
 	"github.com/skycoin/skycoin/src/util/file"
 )
 
-// NodeConfig records the node's configuration
+// Config records the node's configuration
 type NodeConfig struct {
 	// Disable peer exchange
 	DisablePEX bool
@@ -124,7 +124,7 @@ func makeDefaultNodeConfig() NodeConfig {
 		// Disable wallet API
 		DisableWalletApi: false,
 		// Disable CSRF check in the wallet api
-		DisableCSRF: false,
+		DisableCSRF: true,
 		// Only run on localhost and only connect to others on localhost
 		LocalhostOnly: false,
 		// Which address to serve on. Leave blank to automatically assign to a
